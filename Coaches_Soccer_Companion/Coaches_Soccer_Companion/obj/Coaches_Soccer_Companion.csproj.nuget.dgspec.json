@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aaron\\source\\repos\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj": {}
+    "C:\\Users\\Aaron\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aaron\\source\\repos\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj": {
+    "C:\\Users\\Aaron\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aaron\\source\\repos\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj",
+        "projectUniqueName": "C:\\Users\\Aaron\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj",
         "projectName": "Coaches_Soccer_Companion",
-        "projectPath": "C:\\Users\\Aaron\\source\\repos\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj",
+        "projectPath": "C:\\Users\\Aaron\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion.csproj",
         "packagesPath": "C:\\Users\\Aaron\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aaron\\source\\repos\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\obj\\",
+        "outputPath": "C:\\Users\\Aaron\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\Coaches_Soccer_Companion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

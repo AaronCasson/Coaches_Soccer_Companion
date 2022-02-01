@@ -1,10 +1,10 @@
 ﻿namespace Coaches_Soccer_Companion
 {
-    class project
+    class Program
     {
         public static void Main(string[] args)
         {
-            
+            var playTime = new Match()
         }
 
         public static void Teams()
