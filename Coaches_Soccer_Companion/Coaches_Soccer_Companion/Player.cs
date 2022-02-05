@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
-    public class Player
+    public class Player : Participants
     {
-        public int iD { get; set; }
-        public string firstName { get; set; }
 
-        public string lastName { get; set; }
+        public DateTimeOffset dateOfBirth { get; set; }
 
-        public DateTime dateOfBirth { get; set; }
+        List<Playtime> playtimes { get; set; } // evertime the play plays you add to this list.
 
-        public void AddPlayer (string firstName, string lastName, DateTime dateOfBirth)
+        //create a method called get total playtime that sums items in the list.
+        public Player (string PlayerFirstName, string PlayerLastName, DateTime DateOfBirth)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.dateOfBirth = dateOfBirth;
+            int iD = Guid.NewGuid()
+            this.PlayerFirstName = FirstName;
+            this.PlayerLastName = lastName;
+            this.dateOfBirth = dateOfBirth; 
 
         }
+        public enum Position
+        {
+            GoalKeeper,
+            FullBack,
+            MidFielder,
+            Forward
+        }
+
     }
 }
