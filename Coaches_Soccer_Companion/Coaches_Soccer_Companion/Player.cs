@@ -9,7 +9,7 @@ namespace Coaches_Soccer_Companion
     public class Player : Participants
     {
 
-        public DateTimeOffset dateOfBirth { get; set; }
+        public DateTimeOffset dateOfBirth;
 
         List<Playtime> playtimes { get; set; } // evertime the play plays you add to this list.
 
@@ -32,3 +32,4 @@ namespace Coaches_Soccer_Companion
 
     }
 }
+*/

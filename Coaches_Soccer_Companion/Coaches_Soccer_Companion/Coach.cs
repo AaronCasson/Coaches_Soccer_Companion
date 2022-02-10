@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
-    public class Coach : Participants
+    class Coach : Participants
     {
 
-        public string? phoneNumber { get; set; }
+        public string phonenumber;
 
-        public Coach(string FirstName, string LastName, string PhoneNumber) : base(FirstName, LastName)
+        public Coach(string aPhoneNumber, string aFirstName, string aLastName) : base(aFirstName, aLastName)
         {
-
-            this.PhoneNumber = PhoneNumber;
+            phonenumber = aPhoneNumber;
         }
-
+        public void SayMyName(int age)
+        {
+            Console.WriteLine($"Name: {firstname} {lastname} GUID: {ParticipantID} Age: {age} Phone Number: {phonenumber}");
+        }
     }
 }

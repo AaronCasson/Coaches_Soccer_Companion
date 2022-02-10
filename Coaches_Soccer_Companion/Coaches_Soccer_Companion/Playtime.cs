@@ -9,21 +9,16 @@ namespace Coaches_Soccer_Companion
 
     class Playtime
     {
-    public DateTime PlaytimeStart { get; set; }
-    public DateTime PlaytimeEnd { get; set; } 
-    public int goals { get; set; } 
-    public int saves { get; set; }
-        public static void Playtime(string playerID, string position, DateTime playtimeStart, DateTime playtimeEnd, int goals, int saves)
+        public static DateTime playtimestart;
+        public static DateTime playtimeend;
+
+
+
+        public double TimePlayed(DateTime playtimestart, DateTime playtimeend)
         {
-            //????
+            TimeSpan x = playtimestart.Subtract(playtimeend);
+            return x.TotalSeconds;
         }
-        
-    
-    // something to pull stats on the player???
-    public static void PlayerStats()
-        {
-            double matchesAttended;
-            double timePlayedTotal;
-            double percentOfGamePlayed;
-        }
+    }
+
 }

@@ -6,21 +6,28 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
-    public class Participants
+    class Participants
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string firstname;
 
-        public Guid ParticipantID { get; private set; }
+        public string lastname;
 
-        public Participants(Guid ParticipantId, FirstName, LastName)
+        private Guid participantid;
+
+        
+
+        public Participants(string aFirstName, string aLastName)
         {
-            ParticipantId = Guid.NewGuid();
-            this.FirstName = FirstName;
-            this.LastName = LastName;
+            Guid ParticipantID = Guid.NewGuid();
+            firstname = aFirstName;
+            lastname = aLastName;
         }
 
-
+        public Guid ParticipantID
+        {
+            get { return participantid; }
+            set { participantid = value; }
+        }
 
     }
 }

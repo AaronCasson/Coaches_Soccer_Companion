@@ -4,7 +4,9 @@
     {
         public static void Main(string[] args)
         {
-            var playTime = new Match()
+            Coach aaron = new Coach("555-555-5555", "Aaron", "Casson");
+            aaron.SayMyName(100);
+            Console.ReadLine();
         }
     }
 

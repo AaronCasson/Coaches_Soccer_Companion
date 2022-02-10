@@ -1,0 +1,15 @@
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.csproj.AssemblyReference.cache
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.AssemblyInfoInputs.cache
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.AssemblyInfo.cs
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.csproj.CoreCompileInputs.cache
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\bin\Debug\net6.0\Coaches_Soccer_Companion.exe
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\bin\Debug\net6.0\Coaches_Soccer_Companion.deps.json
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\bin\Debug\net6.0\Coaches_Soccer_Companion.runtimeconfig.json
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\bin\Debug\net6.0\Coaches_Soccer_Companion.dll
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\bin\Debug\net6.0\ref\Coaches_Soccer_Companion.dll
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\bin\Debug\net6.0\Coaches_Soccer_Companion.pdb
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.dll
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\ref\Coaches_Soccer_Companion.dll
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.pdb
+C:\Users\Aaron\Coaches_Soccer_Companion\Coaches_Soccer_Companion\Coaches_Soccer_Companion\obj\Debug\net6.0\Coaches_Soccer_Companion.genruntimeconfig.cache
