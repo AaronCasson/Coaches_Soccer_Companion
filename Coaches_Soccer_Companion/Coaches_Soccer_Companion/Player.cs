@@ -6,21 +6,35 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
-    public class Player : Participants
+    class Player : Participants
     {
 
-        public DateTimeOffset dateOfBirth;
+        private DateTime dateofbirth;
 
-        List<Playtime> playtimes { get; set; } // evertime the play plays you add to this list.
+        public string DateOfBirth
+        {
+            get { return dateofbirth.ToString(); }
+            set
+            {
+                try { dateofbirth = DateTime.Parse(value); }
+                catch (Exception FormatException) { Console.WriteLine("Invalid birthday format!"); }
+            }
+        }
+        List<double> playtimelist { get; set; } // evertime the play plays you add to this list.
 
         //create a method called get total playtime that sums items in the list.
-        public Player (string PlayerFirstName, string PlayerLastName, DateTime DateOfBirth)
+        public Player (string aFirstName, string aLastName, string aDateOfBirth) : base(aFirstName, aLastName)
         {
-            int iD = Guid.NewGuid()
-            this.PlayerFirstName = FirstName;
-            this.PlayerLastName = lastName;
-            this.dateOfBirth = dateOfBirth; 
+            DateOfBirth = aDateOfBirth; 
+        }
 
+        public static DateTime playtimestart;
+        public static DateTime playtimeend;
+
+        public double TimePlayed(DateTime playtimestart, DateTime playtimeend)
+        {
+            TimeSpan x = playtimeend.Subtract(playtimestart);
+            return x.TotalSeconds;
         }
         public enum Position
         {
@@ -32,4 +46,3 @@ namespace Coaches_Soccer_Companion
 
     }
 }
-*/

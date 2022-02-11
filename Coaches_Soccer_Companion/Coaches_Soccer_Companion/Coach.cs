@@ -17,7 +17,7 @@ namespace Coaches_Soccer_Companion
         }
         public void SayMyName(int age)
         {
-            Console.WriteLine($"Name: {firstname} {lastname} GUID: {ParticipantID} Age: {age} Phone Number: {phonenumber}");
+            Console.WriteLine($"Name: {firstname} {lastname} GUID: {ParticipantId} Age: {age} Phone Number: {phonenumber}");
         }
     }
 }

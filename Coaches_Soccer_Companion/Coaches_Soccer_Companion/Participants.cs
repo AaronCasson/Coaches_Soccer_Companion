@@ -14,19 +14,19 @@ namespace Coaches_Soccer_Companion
 
         private Guid participantid;
 
+        public Guid ParticipantId
+        {
+            get { return participantid; }
+            set { ; }
+        }
+
         
 
         public Participants(string aFirstName, string aLastName)
         {
-            Guid ParticipantID = Guid.NewGuid();
+            participantid = Guid.NewGuid();
             firstname = aFirstName;
             lastname = aLastName;
-        }
-
-        public Guid ParticipantID
-        {
-            get { return participantid; }
-            set { participantid = value; }
         }
 
     }
