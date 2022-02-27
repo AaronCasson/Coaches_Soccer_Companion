@@ -12,15 +12,13 @@ namespace Coaches_Soccer_Companion
 
         public string lastname;
 
-        private Guid participantid;
+        private Guid participantid { get; }
 
         public Guid ParticipantId
-        {
-            get { return participantid; }
-            set { ; }
-        }
-
-        
+            {
+                get {return participantid;}
+                set { ; }
+            }
 
         public Participants(string aFirstName, string aLastName)
         {

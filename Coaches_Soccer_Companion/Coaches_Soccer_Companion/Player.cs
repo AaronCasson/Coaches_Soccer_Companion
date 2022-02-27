@@ -17,10 +17,16 @@ namespace Coaches_Soccer_Companion
             set
             {
                 try { dateofbirth = DateTime.Parse(value); }
-                catch (Exception FormatException) { Console.WriteLine("Invalid birthday format!"); }
+                catch (Exception FormatException) 
+                { 
+                    Console.WriteLine("Invalid birthday format!");
+                    
+                    Console.WriteLine("Try entering the value again, remember it needs to be MM/DD/YYYY:");
+
+                }
             }
         }
-        List<double> playtimelist { get; set; } // evertime the play plays you add to this list.
+        
 
         //create a method called get total playtime that sums items in the list.
         public Player (string aFirstName, string aLastName, string aDateOfBirth) : base(aFirstName, aLastName)
@@ -33,9 +39,21 @@ namespace Coaches_Soccer_Companion
 
         public double TimePlayed(DateTime playtimestart, DateTime playtimeend)
         {
-            TimeSpan x = playtimeend.Subtract(playtimestart);
-            return x.TotalSeconds;
+            TimeSpan playtime = playtimeend.Subtract(playtimestart);
+            return playtime.TotalSeconds;
         }
+
+        public List<double> TotalTimePlayed = new List<double>();
+
+        //public TimeSpan TotalTimePlayed2 = new TimeSpan(0);
+            
+        /*public TimeSpan TimePlayed2(DateTime playtimestart, DateTime playtimeend)
+        {
+            TotalTimePlayed2 += playtimeend.Subtract(playtimestart);
+            return TotalTimePlayed2;
+        }*/
+
+
         public enum Position
         {
             GoalKeeper,
