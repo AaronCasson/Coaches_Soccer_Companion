@@ -9,8 +9,10 @@ namespace Coaches_Soccer_Companion
     class Player : Participants
     {
 
+
         private DateTime dateofbirth;
 
+        List<Playtime> playtimes;
         public string DateOfBirth
         {
             get { return dateofbirth.ToString(); }
@@ -26,41 +28,19 @@ namespace Coaches_Soccer_Companion
                 }
             }
         }
+        public Player (string aFirstName, string aLastName, string aDateOfBirth, List<Playtime.Position> position) : base(aFirstName, aLastName)
+        {
+            DateOfBirth = aDateOfBirth;
+            playtimes = new List<Playtime>();
+        }
+
+
         
 
-        //create a method called get total playtime that sums items in the list.
-        public Player (string aFirstName, string aLastName, string aDateOfBirth) : base(aFirstName, aLastName)
+/*        public string AssignPosition(enum Position)
         {
-            DateOfBirth = aDateOfBirth; 
-        }
 
-        public static DateTime playtimestart;
-        public static DateTime playtimeend;
-
-        public double TimePlayed(DateTime playtimestart, DateTime playtimeend)
-        {
-            TimeSpan playtime = playtimeend.Subtract(playtimestart);
-            return playtime.TotalSeconds;
-        }
-
-        public List<double> TotalTimePlayed = new List<double>();
-
-        //public TimeSpan TotalTimePlayed2 = new TimeSpan(0);
-            
-        /*public TimeSpan TimePlayed2(DateTime playtimestart, DateTime playtimeend)
-        {
-            TotalTimePlayed2 += playtimeend.Subtract(playtimestart);
-            return TotalTimePlayed2;
         }*/
-
-
-        public enum Position
-        {
-            GoalKeeper,
-            FullBack,
-            MidFielder,
-            Forward
-        }
 
     }
 }

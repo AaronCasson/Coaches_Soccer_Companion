@@ -2,7 +2,7 @@
 {
     class Program
     {
-        private static List<Player> players = new List<Player>();
+        public static List<Player> players = new List<Player>();
         public static void Main(string[] args)
         {
     
@@ -40,13 +40,32 @@
             int x = 1;
             do
             {
+                
                 Console.WriteLine($"What is the first name of player {x}:");
                 string aFirstName = Console.ReadLine();
                 Console.WriteLine($"What is the last name of player {x}:");
                 string aLastName = Console.ReadLine();
                 Console.WriteLine($"What is the birthday of player {x}: (use formate MM/DD/YYYY");
                 string aDateOfBirth = Console.ReadLine();
-                Player player = new Player(aFirstName, aLastName, aDateOfBirth);
+                Console.WriteLine($"What position will player {x} start in during this game:");
+                int i = 1;
+                foreach (var item in Enum.GetNames(typeof(Playtime.Position)))
+                {
+                    Console.WriteLine($"{i}: {item}");
+                    i++;
+                }
+                List<Playtime.Position>position = new List<Playtime.Position>();
+                string positionSelection = Console.ReadLine();
+                switch (positionSelection)
+                {
+                    case "1": position.Add(Playtime.Position.GoalKeeper); break;
+                    case "2": position.Add(Playtime.Position.FullBack); break;
+                    case "3": position.Add(Playtime.Position.MidFielder); break;
+                    case "4": position.Add(Playtime.Position.Forward); break;
+                    case "5": position.Add(Playtime.Position.Bench); break;
+                    default: Console.WriteLine("You entered an invalid selection, please try again."); break;
+                }
+                Player player = new Player(aFirstName, aLastName, aDateOfBirth, position);
                 players.Add(player);
                 x += 1;
 
@@ -63,6 +82,17 @@
             while (addNewPlayer == true);
 
 
+            
+            
+/*            Console.WriteLine("Choose an action:");
+            string userSelection = Console.ReadLine();
+            switch(userSelection)
+            {
+                case "1": StartMatch():
+                case "2": AddPlayer():
+                case "3: ModifyPlayer():
+
+            }*/
 
 /*            Coach aaron = new Coach("555-555-5555", "Aaron", "Casson");
             aaron.SayMyName(100);

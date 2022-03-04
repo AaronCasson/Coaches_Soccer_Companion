@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
+    //Here I've demonstrated inheritance of the Participants Class
     class Coach : Participants
     {
 
@@ -15,9 +16,9 @@ namespace Coaches_Soccer_Companion
         {
             phonenumber = aPhoneNumber;
         }
-        public void SayMyName(int age)
+        public void DisplayCoach()
         {
-            Console.WriteLine($"Name: {firstname} {lastname} GUID: {ParticipantId} Age: {age} Phone Number: {phonenumber}");
+            Console.WriteLine($"Name: {firstname} {lastname} GUID: {ParticipantId} Phone Number: {phonenumber}");
         }
     }
 }
