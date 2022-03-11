@@ -6,30 +6,66 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
+    public enum Position
+    {
+        GoalKeeper,
+        FullBack,
+        MidFielder,
+        Forward,
+        Bench
+    };
 
     class Playtime
     {
-        public static DateTime playtimestart;
-        public static DateTime playtimeend;
-
-        public double TimePlayed(DateTime playtimestart, DateTime playtimeend)
+        public DateTime playtimestart;
+        public DateTime playtimeend; 
+        public Position position;
+        public double playtime;
+        
+        public Playtime(Position position, double playtime)
         {
-            TimeSpan playtime = playtimeend.Subtract(playtimestart);
-            return playtime.TotalSeconds;
+            this.position = position;
+            this.playtime = playtime;
         }
 
-        public enum Position
+       public double TimePlayed(DateTime playtimestart, DateTime playtimeend)
+       {
+           TimeSpan playtime = playtimeend.Subtract(playtimestart);
+           return playtime.TotalSeconds;
+       }
+
+
+        public void CalculatePlaytime()
         {
-            GoalKeeper,
-            FullBack,
-            MidFielder,
-            Forward,
-            Bench
-        };
-        //timespan
-        //position
-        //in player class - it will have a list of playtime (a list of type playtime), playtimes, every time they play a diff position - you'd add to that playtime list.
-        //first ask which player you want to add playtime to - need to find player in players list - list them out (use linq query), once you have that object player.add Playtime. player.playtimes.add (can call add on a list).
-    }
+            Console.WriteLine("Press \"Enter\" to start the match:");
+            Console.ReadLine();
+            DateTime playtimestart = DateTime.Now;
+            Console.WriteLine("The game has started.  Press \"Enter\" again to pause the match:");
+            Console.ReadLine();
+            DateTime playtimeend = DateTime.Now;
+            double newPlayTime = TimePlayed(playtimestart, playtimeend);
+        }
+
+
+            for (int index = 0; index < players.Count; index++)
+            {
+                players[index].playtimes.Add(newPlayTime);
+            }
+        }
+
+    /* public double TimePlayed 
+{ 
+ get {
+     TimeSpan playtime = playtimeend.Subtract(playtimestart);
+     return playtime.TotalSeconds;
+ }
+}*/
+
+
+    //timespan
+    //position
+    //in player class - it will have a list of playtime (a list of type playtime), playtimes, every time they play a diff position - you'd add to that playtime list.
+    //first ask which player you want to add playtime to - need to find player in players list - list them out (use linq query), once you have that object player.add Playtime. player.playtimes.add (can call add on a list).
+}
 
 }
