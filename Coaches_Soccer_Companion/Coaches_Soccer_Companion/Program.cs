@@ -2,6 +2,7 @@
 {
     class Program
     {
+
         public static List<Player> players = new List<Player>();
         public static void Main(string[] args)
         {
@@ -19,91 +20,78 @@
                 Console.Write(c);
                 Thread.Sleep(25);
             }
+            //this section uses console read line to collect coach info.
+            Console.WriteLine("Please enter your first name:");
+            string coachFirstName = Console.ReadLine();
 
-            Console.WriteLine("What would you like to do first:");
-            Console.WriteLine("1: Register A Coach");
-            Console.WriteLine("2: Create A Player Roster For The Game");
-            Console.WriteLine("3: Start the Match");
+            Console.WriteLine("Cool, thanks!  Now enter your last name:");
+            string coachLastName = Console.ReadLine();
 
-            string userselection = Console.ReadLine();
-            switch(userselection)
+            Console.WriteLine("One last thing... please enter your phone number in the format 555-555-5555");
+            string coachPhoneNumber = Console.ReadLine();
+
+            //This uses the coach class to create new instance of coach
+            Coach coach = new Coach(coachFirstName, coachLastName, coachPhoneNumber);
+
+            bool addNewPlayer = false;
+            int x = 1;
+            do
             {
-                case "1": Coach.RegisterCoach(); break;
-                case "2": Player.CreateRoster(); break;
+
+                Console.WriteLine($"What is the first name of player {x}:");
+                string playerFirstName = Console.ReadLine();
+                Console.WriteLine($"What is the last name of player {x}:");
+                string playerLastName = Console.ReadLine();
+                Console.WriteLine($"What is the birthday of player {x}: (use formate MM/DD/YYYY");
+                string aDateOfBirth = Console.ReadLine();
+
+                players.Add(new Player(playerFirstName, playerLastName, aDateOfBirth));
+                x += 1;
+
+                //In this section I use a switch/case method to determine if the loop should repeat.
+                Console.WriteLine("Would you like to add another player? (enter yes or no) ");
+                string userSelection = Console.ReadLine();
+                switch (userSelection)
+                {
+                    case "yes": addNewPlayer = true; break;
+                    case "no": addNewPlayer = false; break;
+                    default: Console.WriteLine("You did not enter a correct response."); break;
+                }
             }
-            
+            while (addNewPlayer == true);
 
+                for (int index = 0; index < players.Count; index++)
+                {
+                PositionTime positiontime = new PositionTime();
+                Console.WriteLine($"What position will {players[index].FirstName} {players[index].LastName} play in?");
 
+                    int i = 1;
+                    foreach (var item in Enum.GetValues(typeof(Position)))
+                    {
+                        Console.WriteLine($"{i}: {item}");
+                        i++;
+                    }
+                    string positionSelection = Console.ReadLine();
+                    positiontime.Position = (Position)int.Parse(positionSelection);
+                    switch (positionSelection)
+                    {
+                        case "1": break;
+                        case "2": break;
+                        case "3": break;
+                        case "4": break;
+                        case "5": break;
+                        default:
+                            Console.WriteLine("You entered an invalid selection, please try again."); break;
+                    }
+                players[index].PlayerPositionTime.Add(positiontime);
+                }
 
-            Console.WriteLine("Now can you tell us who showed up to the game today?");
-
-
-            //In this section of code I've leverage a do/while loop to capture the player info.
-            
-
-
-
-            Console.WriteLine("In this period here is what your players did:");
-            for (int index = 0; index < players.Count; index++)
+                for (int index = 0; index < players.Count; index++)
             {
-                Console.WriteLine(players[index].firstname + " " + players[index].lastname + " " + players[index].position[index] + " " + players[index].playtimes[index]);
+                Console.WriteLine($"{players[index].FirstName} {players[index].LastName} {players[index].DateOfBirth} {players[index].PlayerPositionTime[index].Position}");
             }
-            Console.ReadLine();
-
-            /*            Console.WriteLine("Choose an action:");
-                        string userSelection = Console.ReadLine();
-                        switch(userSelection)
-                        {
-                            case "1": StartMatch():
-                            case "2": AddPlayer():
-                            case "3: ModifyPlayer():
-
-                        }*/
-
-            /*            Coach aaron = new Coach("555-555-5555", "Aaron", "Casson");
-                        aaron.SayMyName(100);
-                        Console.ReadLine();
-
-                        Player ryan = new Player("Ryan", "Casson", "2011-07-11");
-                        Console.WriteLine(ryan.DateOfBirth);
-                        Console.ReadLine();
-
-                        DateTime x = DateTime.Now;
-                        Console.ReadLine();
-                        DateTime y = DateTime.Now;
-                        Console.ReadLine();
-
-
-
-                        Console.WriteLine(ryan.TimePlayed(x, y));
-                       // Console.WriteLine("TimePlayed2: " + ryan.TimePlayed2(x, y));
-                        Console.ReadLine();
-
-                        Double playtime1 = ryan.TimePlayed(x, y);
-                        Console.WriteLine(playtime1);
-                        Console.ReadLine();
-
-                        DateTime a = DateTime.Now;
-                        Console.ReadLine();
-                        DateTime b = DateTime.Now;
-                        Console.ReadLine();
-
-                        Console.WriteLine(ryan.TimePlayed(a, b));
-                       // Console.WriteLine("TimePlayed2: " + ryan.TimePlayed2(a, b));
-                        Console.ReadLine();
-
-
-                        Double playtime2 = ryan.TimePlayed(a, b);
-                        Console.WriteLine(playtime2);
-                        Console.ReadLine();
-
-                        ryan.TotalTimePlayed.Add(playtime1);
-                        ryan.TotalTimePlayed.Add(playtime2);
-                        Console.WriteLine(ryan.TotalTimePlayed.Sum());
-
-                        Console.ReadLine();*/
+                Console.ReadLine();
 
         }
     }
-
 }

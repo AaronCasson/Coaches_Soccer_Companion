@@ -9,9 +9,9 @@ namespace Coaches_Soccer_Companion
     //Here I've created a Participants class to capture basic info (ID, First Name, Last Name) which can be inherited by Coach and Players classes to which it will be relevant.
     class Participants
     {
-        public string firstname;
+        public string FirstName;
 
-        public string lastname;
+        public string LastName;
 
         //Here I've demonstrated the use of a Get/Set to allow access to see but not modify a private class (GUID).
         private Guid participantid { get; }
@@ -22,11 +22,11 @@ namespace Coaches_Soccer_Companion
                 set { ; }
             }
         //Here I've demonstrated the use of a constructor which accepts two parameters and also executes a method to genreate an ID upon construction.
-        public Participants(string aFirstName, string aLastName)
+        public Participants(string firstname, string lastname)
         {
-            participantid = Guid.NewGuid();
-            firstname = aFirstName;
-            lastname = aLastName;
+            ParticipantId = Guid.NewGuid();
+            this.FirstName = firstname;
+            this.LastName = lastname;
         }
 
     }
