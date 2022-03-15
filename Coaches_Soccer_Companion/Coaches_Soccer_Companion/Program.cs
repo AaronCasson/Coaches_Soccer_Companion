@@ -72,7 +72,7 @@
                         i++;
                     }
                     string positionSelection = Console.ReadLine();
-                    positiontime.Position = (Position)int.Parse(positionSelection);
+                    positiontime.Position = (Position)(int.Parse(positionSelection)-1);
                     switch (positionSelection)
                     {
                         case "1": break;
@@ -88,7 +88,11 @@
 
                 for (int index = 0; index < players.Count; index++)
             {
-                Console.WriteLine($"{players[index].FirstName} {players[index].LastName} {players[index].DateOfBirth} {players[index].PlayerPositionTime[index].Position}");
+                Console.WriteLine(String.Format("{0} {1} {2}", players[index].FirstName, players[index].LastName, players[index].DateOfBirth));
+                foreach(PositionTime p in players[index].PlayerPositionTime)
+                {
+                    Console.WriteLine(p.Position);
+                }
             }
                 Console.ReadLine();
 

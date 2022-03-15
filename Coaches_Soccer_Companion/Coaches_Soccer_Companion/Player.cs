@@ -8,7 +8,7 @@ namespace Coaches_Soccer_Companion
 {
     class Player : Participants
     {
-        public List<PositionTime> PlayerPositionTime { get; set; }
+        public List<PositionTime> PlayerPositionTime = new List<PositionTime>();
 
         private DateTime dateofbirth;
        // public List<Playtime> playtime;
