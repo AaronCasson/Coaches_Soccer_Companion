@@ -9,11 +9,8 @@ namespace Coaches_Soccer_Companion
     class Team
     {
         public string TeamName;
-        
-        public Team(string teamname, Coach coach, List<Player> Players)
-        {
-            this.TeamName = teamname;
-        }
+        public Coach Coach;
+        public List<Player> Players;
 
     }
 }

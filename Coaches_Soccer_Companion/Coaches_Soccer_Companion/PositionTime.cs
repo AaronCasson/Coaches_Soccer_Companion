@@ -20,13 +20,15 @@ namespace Coaches_Soccer_Companion
         public DateTime PlaytimeStart;
         public DateTime PlaytimeEnd;
         public Position Position;
-        public double TimePlayed
-        {
-            get
+        public double TimePlayed;
+        
+
+
+        public static double TimePlayedCalc(DateTime PlaytimeStart, DateTime PlaytimeEnd)
             {
                 TimeSpan playtime = PlaytimeEnd.Subtract(PlaytimeStart);
                 return playtime.TotalSeconds;
             }
-        }
+        
     }
 }
