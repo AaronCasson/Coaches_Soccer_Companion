@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Coaches_Soccer_Companion
 {
+    //This is a simple class structure to store a team.
     class Team
     {
         public string TeamName;
